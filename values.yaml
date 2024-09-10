@@ -1255,10 +1255,10 @@ mariadb:
     ##
     persistence:
       enabled: true
-      storageClass: ""
+      storageClass: "local-path"
       accessModes:
         - ReadWriteOnce
-      size: 8Gi
+      size: 5Gi
     ## MariaDB primary container's resource requests and limits
     ## ref: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
     ## We usually recommend not to specify default resources and to leave this as a conscious
