@@ -20,7 +20,7 @@ global:
   ##
   imagePullSecrets: []
   defaultStorageClass: ""
-  storageClass: ""
+  storageClass: "local-path"
   ## Compatibility adaptations for Kubernetes platforms
   ##
   compatibility:
@@ -847,7 +847,7 @@ persistence:
   ## If set to "-", storageClassName: "", which disables dynamic provisioning
   ## If undefined (the default) or set to null, no storageClassName spec is set, choosing the default provisioner
   ##
-  storageClass: ""
+  storageClass: "local-path"
   ## @param persistence.accessModes [array] Persistent Volume access modes
   ##
   accessModes:
