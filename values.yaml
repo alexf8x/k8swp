@@ -1363,3 +1363,19 @@ externalCache:
   ## @param externalCache.port External cache server port
   ##
   port: 11211
+
+
+externalSecrets:
+  - name: bs1
+    refreshInterval: "15s"
+    secretStoreRef:
+      name: vault-backend
+      kind: ClusterSecretStore
+    target:
+      name: nxnxnx
+      creationPolicy: Owner
+    data:
+      - secretKey: test1
+        remoteRef:
+          key: kv/bbz
+          property: user1
