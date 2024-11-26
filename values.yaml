@@ -20,7 +20,7 @@ global:
   ##
   imagePullSecrets: []
   defaultStorageClass: ""
-  storageClass: "local-path"
+  storageClass: "nfs-client"
   ## Compatibility adaptations for Kubernetes platforms
   ##
   compatibility:
@@ -847,14 +847,14 @@ persistence:
   ## If set to "-", storageClassName: "", which disables dynamic provisioning
   ## If undefined (the default) or set to null, no storageClassName spec is set, choosing the default provisioner
   ##
-  storageClass: "local-path"
+  storageClass: "nfs-client"
   ## @param persistence.accessModes [array] Persistent Volume access modes
   ##
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   ## @param persistence.accessMode Persistent Volume access mode (DEPRECATED: use `persistence.accessModes` instead)
   ##
-  accessMode: ReadWriteOnce
+  accessMode: ReadWriteMany
   ## @param persistence.size Persistent Volume size
   ##
   size: 5Gi
@@ -971,8 +971,8 @@ pdb:
 ## @param autoscaling.targetMemory Target Memory utilization percentage
 ##
 autoscaling:
-  enabled: false
-  minReplicas: 1
+  enabled: true
+  minReplicas: 2
   maxReplicas: 11
   targetCPU: 50
   targetMemory: 50
@@ -1257,9 +1257,9 @@ mariadb:
     ##
     persistence:
       enabled: true
-      storageClass: "local-path"
+      storageClass: "nfs-client"
       accessModes:
-        - ReadWriteOnce
+        - ReadWriteMany
       size: 5Gi
     ## MariaDB primary container's resource requests and limits
     ## ref: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
