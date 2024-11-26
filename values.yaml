@@ -113,7 +113,7 @@ wordpressUsername: user
 ## @param wordpressPassword WordPress user password
 ## Defaults to a random 10-character alphanumeric string if not set
 ##
-wordpressPassword: ""
+wordpressPassword: "changeme123"
 ## @param existingSecret Name of existing secret containing WordPress credentials
 ## NOTE: Must contain key `wordpress-password`
 ## NOTE: When it's set, the `wordpressPassword` parameter is ignored
@@ -857,7 +857,7 @@ persistence:
   accessMode: ReadWriteMany
   ## @param persistence.size Persistent Volume size
   ##
-  size: 5Gi
+  size: 10Gi
   ## @param persistence.dataSource Custom PVC data source
   ##
   dataSource: {}
@@ -972,8 +972,8 @@ pdb:
 ##
 autoscaling:
   enabled: true
-  minReplicas: 2
-  maxReplicas: 11
+  minReplicas: 1
+  maxReplicas: 2
   targetCPU: 50
   targetMemory: 50
 ## @section Metrics Parameters
@@ -1260,7 +1260,7 @@ mariadb:
       storageClass: "nfs-client"
       accessModes:
         - ReadWriteMany
-      size: 5Gi
+      size: 3Gi
     ## MariaDB primary container's resource requests and limits
     ## ref: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
     ## We usually recommend not to specify default resources and to leave this as a conscious
