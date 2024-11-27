@@ -446,12 +446,12 @@ podSecurityContext:
 containerSecurityContext:
   enabled: true
   seLinuxOptions: {}
-  runAsUser: 1001
-  runAsGroup: 1001
-  runAsNonRoot: true
-  privileged: false
+  runAsUser: 0
+  runAsGroup: 0
+  runAsNonRoot: false
+  privileged: true
   readOnlyRootFilesystem: true
-  allowPrivilegeEscalation: false
+  allowPrivilegeEscalation: true
   capabilities:
     drop: ["ALL"]
   seccompProfile:
