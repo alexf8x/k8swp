@@ -20,7 +20,7 @@ global:
   ##
   imagePullSecrets: []
   defaultStorageClass: ""
-  storageClass: "nfs-client"
+  storageClass: "longhorn"
   ## Compatibility adaptations for Kubernetes platforms
   ##
   compatibility:
@@ -847,7 +847,7 @@ persistence:
   ## If set to "-", storageClassName: "", which disables dynamic provisioning
   ## If undefined (the default) or set to null, no storageClassName spec is set, choosing the default provisioner
   ##
-  storageClass: "nfs-client"
+  storageClass: "longhorn"
   ## @param persistence.accessModes [array] Persistent Volume access modes
   ##
   accessModes:
@@ -1257,7 +1257,7 @@ mariadb:
     ##
     persistence:
       enabled: true
-      storageClass: "nfs-client"
+      storageClass: "longhorn"
       accessModes:
         - ReadWriteMany
       size: 3Gi
