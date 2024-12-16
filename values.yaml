@@ -1228,8 +1228,8 @@ mariadb:
   ##
   enabled: true
   ## @param mariadb.architecture MariaDB architecture. Allowed values: `standalone` or `replication`
-  ##
-  architecture: standalone
+  ## architecture can be replication or standalone
+  architecture: replication
 
 
   ## MariaDB Authentication parameters
