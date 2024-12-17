@@ -471,7 +471,7 @@ livenessProbe:
   enabled: true
   tcpSocket:
     port: http
-  initialDelaySeconds: 120
+  initialDelaySeconds: 3600
   periodSeconds: 10
   timeoutSeconds: 5
   failureThreshold: 6
@@ -500,7 +500,7 @@ readinessProbe:
     ##   value: https
     ##
     httpHeaders: []
-  initialDelaySeconds: 120
+  initialDelaySeconds: 3600
   periodSeconds: 10
   timeoutSeconds: 5
   failureThreshold: 6
