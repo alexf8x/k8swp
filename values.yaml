@@ -1288,7 +1288,7 @@ mariadb:
     resources: {}
     
   secondary:
-    replicaCount: 2
+    replicaCount: 1
   
 
 
