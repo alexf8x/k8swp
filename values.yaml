@@ -1230,7 +1230,7 @@ mariadb:
   enabled: true
   ## @param mariadb.architecture MariaDB architecture. Allowed values: `standalone` or `replication`
   ## architecture can be replication or standalone
-  architecture: replication
+  architecture: standalone
 
 
   ## MariaDB Authentication parameters
@@ -1261,7 +1261,7 @@ mariadb:
       enabled: true
       storageClass: "longhorn"
       accessModes:
-        - ReadWriteMany
+        - ReadWriteOnce
       size: 2Gi
     ## MariaDB primary container's resource requests and limits
     ## ref: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
@@ -1287,8 +1287,8 @@ mariadb:
     ##
     resources: {}
     
-  secondary:
-    replicaCount: 1
+  #secondary:
+  #  replicaCount: 1
   
 
 
