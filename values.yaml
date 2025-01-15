@@ -1261,7 +1261,7 @@ mariadb:
       enabled: true
       storageClass: "longhorn"
       accessModes:
-        - ReadWriteOnce
+        - ReadWriteMany
       size: 2Gi
     ## MariaDB primary container's resource requests and limits
     ## ref: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
