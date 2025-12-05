@@ -20,7 +20,7 @@ global:
   ##
   imagePullSecrets: []
   defaultStorageClass: ""
-  storageClass: "longhorn"
+  storageClass: "local-path"
   ## Compatibility adaptations for Kubernetes platforms
   ##
   compatibility:
