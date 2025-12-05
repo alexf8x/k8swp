@@ -1322,7 +1322,7 @@ externalDatabase:
 memcached:
   ## @param memcached.enabled Deploy a Memcached server for caching database queries
   ##
-  enabled: true
+  enabled: false
   ## Authentication parameters
   ## ref: https://github.com/bitnami/containers/tree/main/bitnami/memcached#creating-the-memcached-admin-user
   ##
