@@ -1259,7 +1259,7 @@ mariadb:
     ##
     persistence:
       enabled: true
-      storageClass: "longhorn"
+      storageClass: "local-path"
       accessModes:
         - ReadWriteOnce
       size: 2Gi
